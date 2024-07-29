@@ -26,7 +26,7 @@ jobs:
     name: "Apply terraform code changes"
     runs-on: ubuntu-latest
     defaults:
-      runs:
+      run:
         shell: bash
         working_directory: ./terraform
 
@@ -60,4 +60,4 @@ jobs:
         if: steps.plan.outcome == 'failure'
         run: exit 1
       
-      
+
